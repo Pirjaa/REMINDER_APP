@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schedule App</title>
+  <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2 id="title">Schedule App</h2>
+      <span id="current-time"></span>
+    </div>
+    <form method="post" action="insert.php">
+      <div class="input-group">
+        <label for="task-input">Task:</label>
+        <input type="text" id="task-input" name="task" placeholder="Enter task" required>
+      </div>
+      <div class="input-group">
+        <label for="datetime-input">Date & Time:</label>
+        <input type="datetime-local" id="datetime-input" name="datetime" required>
+      </div>
+      <div class="input-group">
+        <label for="notes-input">Notes:</label>
+        <textarea id="notes-input" name="notes" rows="3" placeholder="Enter notes"></textarea>
+      </div>      
+      <button class="btn" type="submit" onclick="addReminder()">Add Reminder</button>
+    </form>
+    <ul class="reminder-list" id="reminder-list">
+      <?php include 'display_reminders.php'; ?>
+    </ul>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

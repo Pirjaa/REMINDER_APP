@@ -1,0 +1,166 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(assets/blue_calender_background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    
+  }
+  
+  .container {
+    
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #333;
+    border-radius: 36px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 36px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  #title {
+    margin: 0;
+    font-size: 28px;
+    color: #fff;
+  }
+  
+  #current-time {
+    font-size: 24px;
+    color: #fff;
+    opacity: 0.7;
+  }
+  
+  .input-group {
+    margin-bottom: 24px;
+    padding: 0;
+    margin-right: 20px;
+  }
+  
+  .input-group label {
+    flex-basis: 120px;
+    margin-right: 20px;
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .input-group input[type="text"],
+  .input-group input[type="datetime-local"] {
+    width: 100%;
+    padding: 14px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .input-group input[type="text"]:focus,
+  .input-group input[type="datetime-local"]:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 18px;
+    resize: vertical;
+  }
+  
+  .input-group textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #7e9cdf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #506fbf;
+  }
+  
+  .reminder-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .reminder-item {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 25% 20% 35% 12%;
+    grid-column-gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 16px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .reminder-item span {
+    color: #fff;
+    font-weight: bold;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+  
+  .reminder-item .task {
+    font-size: 15px;
+    grid-column: 1 / span 1; 
+    
+  }
+  
+  .reminder-item .datetime {
+    font-size: 15px;
+    opacity: 0.7;
+    grid-column: 2 / span 1; 
+  
+  }
+  
+  .reminder-item .notes {
+    font-size: 15px;
+    grid-column: 3 / span 1;
+    margin-right: 30px;
+  }
+  
+  .reminder-item .btn {
+    background-color: #ff7b7b;
+    justify-self: end;
+    align-self: center;
+    grid-column: 4 / span 1; 
+  }
+  
+  .reminder-item .btn:hover {
+    background-color: #ff5656;
+  }
+  
